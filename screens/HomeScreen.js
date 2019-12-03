@@ -1,7 +1,7 @@
 import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
 
-import Teach from '../screens/Teach.js';
+
 import {
   Image,
   Platform,
@@ -32,7 +32,7 @@ export default function HomeScreen() {
 
      
     <TouchableOpacity
-        onPress ={this._onPressButton}
+        onPress={() => props.navigation.navigate('TeachScreen')}
            style={styles.Button}>
            <Image
              style={{
@@ -123,7 +123,7 @@ export default function HomeScreen() {
 
 HomeScreen.navigationOptions =( {
   header: null,
-  Teach : Teach,
+  
 
 });
 

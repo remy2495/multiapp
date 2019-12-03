@@ -1,9 +1,18 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import { createStackNavigator, createBottomTabNavigator, StackActions, } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
+
+//----------------------------Home----------------------------//
 import HomeScreen from '../screens/HomeScreen';
+import TeachScreen from '../screens/TeachScreen';
+import NotesScreen from '../screens/NotesScreen';
+import QuizScreen from '../screens/QuizScreen';
+import TutorialScreen from '../screens/TutorialScreen';
+import ExamScreen from '../screens/ExamScreen';
+
+
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
@@ -16,7 +25,11 @@ const config = Platform.select({
 const HomeStack = createStackNavigator(
   {
     Home: HomeScreen,
-    
+    Teach: TeachScreen,
+    Notes: NotesScreen,
+    Quiz: QuizScreen,
+    Tutorial: TutorialScreen,
+    Exam: ExamScreen,
   },
   config
 );
