@@ -16,8 +16,8 @@ import {
 
 import { MonoText } from '../components/StyledText';
 
-export default function HomeScreen() {
- 
+export default function HomeScreen(props) {
+ console.log(props)
  
   return (
     <View style={styles.container}>
@@ -45,7 +45,7 @@ export default function HomeScreen() {
 
         </TouchableOpacity>
     <TouchableOpacity
-        onPress ={this._onPressButton}
+        onPress ={() => props.navigation.navigate('NotesScreen')}
            style={styles.Button}>
            <Image
              style={{
@@ -58,7 +58,7 @@ export default function HomeScreen() {
 
         </TouchableOpacity>
     <TouchableOpacity
-        onPress ={this._onPressButton}
+        onPress ={() => props.navigation.navigate('TutorialScreen')}
            style={styles.Button}>
            <Image
              style={{
@@ -73,7 +73,7 @@ export default function HomeScreen() {
         </View>
         <View style={styles.nextContainer}>
     <TouchableOpacity
-        onPress ={this._onPressButton}
+        onPress ={() => props.navigation.navigate('ExamScreen')}
            style={styles.Button}>
            <Image
              style={{
@@ -86,7 +86,7 @@ export default function HomeScreen() {
 
         </TouchableOpacity>
     <TouchableOpacity
-        onPress ={this._onPressButton}
+        onPress ={() => props.navigation.navigate('QuizScreen')}
            style={styles.Button}>
            <Image
              style={{
